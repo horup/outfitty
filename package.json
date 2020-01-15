@@ -1,0 +1,30 @@
+{
+  "name": "outfitty",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel ./src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/horup/outfitty.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/horup/outfitty/issues"
+  },
+  "homepage": "https://github.com/horup/outfitty#readme",
+  "dependencies": {
+    "@material-ui/core": "^4.8.3",
+    "@types/react": "^16.9.17",
+    "@types/react-dom": "^16.9.4",
+    "mobx-react-lite": "^1.5.2",
+    "parcel-bundler": "^1.12.4",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "typescript": "^3.7.4"
+  }
+}
