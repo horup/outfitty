@@ -1,6 +1,7 @@
 .avatar
 {
     border: 1px black solid;
+    width:512px;
 }
 
 .avatar-img

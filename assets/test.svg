@@ -1,0 +1,5 @@
+<svg viewBox="-50 0 100 150" xmlns="http://www.w3.org/2000/svg">
+  <circle id="head" fill="#FFDBAC"  cx="0" cy="20" r="15"/>
+  <rect id="shirt" fill="blue" x="-15" y = "35" width="30" height="40"/>
+  <rect id="pants" fill="red" x="-15" y = "75" width="30" height="40"/>
+</svg>
