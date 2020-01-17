@@ -1,28 +1,39 @@
 import * as React from 'react';
+import { IState } from '..';
 declare var require;
 let s = require("../../assets/test.svg");
-export const Avatar = ()=>
+export const Avatar = ({shirtColor}:{shirtColor:string})=>
 {
     let obj:HTMLObjectElement;
-    let svg: SVGSVGElement;
+    let [svgState, setSvg] =  React.useState({svg:null as SVGSVGElement});
+
     React.useEffect(()=>
     {
-        obj.onload = ()=>{
-            svg = obj.contentDocument.firstElementChild as SVGSVGElement;
-            console.log(svg);
+        if (svgState.svg == null)
+        {
+            obj.onload = ()=>{
+                let svg = obj.contentDocument.firstElementChild as SVGSVGElement;
+                setSvg({svg:svg});
+            }
+
+        }
+        else
+        {
+            let svg = svgState.svg;
             let head = svg.getElementById("head");
             let shirt = svg.getElementById("shirt");
             let pants = svg.getElementById("pants");
 
-            shirt.setAttribute("fill", "yellow");
+            shirt.setAttribute("fill", shirtColor);
             pants.setAttribute("fill", "green");
         }
+
     });
+   
     return (
-       
-        <div className="avatar">
-            <object ref={r=>obj=r} data={s} type="image/svg+xml" style={{width:'100%'}}>
-            </object>
-        </div>
-        )
+    <div>
+        <object ref={r=>obj=r} data={s} type="image/svg+xml">
+        </object>
+    </div>)
+
 }
