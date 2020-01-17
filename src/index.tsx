@@ -9,19 +9,23 @@ import { useObservable, useObserver } from 'mobx-react-lite';
 export interface IState
 {
   shirtColor:string;
+  pantsColor:string;
 }
 
 const App = ()=>
 {
   const state = useObservable<IState>({
-    shirtColor:'#FF0000'
+    shirtColor:'#9a6d26',
+    pantsColor:'#9DAECD'
   });
 
 
   return (<Container>
         <div className="container">
           <div className="avatar">
-            {useObserver(()=><Avatar shirtColor={state.shirtColor}/>)}
+            {useObserver(()=><Avatar 
+            shirtColor={state.shirtColor}
+            pantsColor={state.pantsColor}/>)}
           </div>
           <div className="settings">
             <Settings state={state}/>
