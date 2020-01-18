@@ -22,8 +22,11 @@ export const Avatar = ({shirtColor, pantsColor}:{shirtColor:string, pantsColor:s
             let svg = svgState.svg;
             let head = svg.getElementById("head");
             let shirt = svg.getElementById("shirt");
+         //   let arms = svg.getElementById("arms");
             let pants = svg.getElementById("pants");
 
+           // arms.setAttribute("style", "");
+           // arms.setAttribute("fill", shirtColor);
             shirt.setAttribute("fill", shirtColor);
             pants.setAttribute("fill", pantsColor);
         }
