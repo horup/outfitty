@@ -22,19 +22,19 @@ const App = ()=>
   });
 
 
-  return (<Container>
+  return (
         <div className="container">
+          <div className="settings">
+            <Settings state={state}/>
+          </div>
           <div className="avatar">
             {useObserver(()=><Avatar 
             shirtColor={state.shirtColor}
             pantsColor={state.pantsColor}
             blouseColor={state.blouseColor}/>)}
           </div>
-          <div className="settings">
-            <Settings state={state}/>
-          </div>
         </div>
-    </Container>)
+    )
 }
  
 ReactDOM.render(<App />, document.getElementById("app"));
