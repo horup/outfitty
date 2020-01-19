@@ -26,8 +26,9 @@ export const Settings = ({state}:{state:IState})=>
             <CardContent>
             <form noValidate autoComplete="off">
                 <ColorChanger color={state.shirtColor} text="Shirt Color" onChange={c=>state.shirtColor = c}/>
-                <ColorChanger color={state.pantsColor} text="Pants Color" onChange={c=>state.pantsColor = c}/>
                 <ColorChanger color={state.blouseColor} text="Blouse Color" onChange={c=>state.blouseColor = c}/>
+
+                <ColorChanger color={state.pantsColor} text="Pants Color" onChange={c=>state.pantsColor = c}/>
               
                 </form>
             </CardContent>

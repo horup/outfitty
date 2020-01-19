@@ -18,7 +18,7 @@ const App = ()=>
   const state = useObservable<IState>({
     shirtColor:'#9a6d26',
     pantsColor:'#9DAECD',
-    blouseColor:'#FF0000'
+    blouseColor:'#101010'
   });
 
 
