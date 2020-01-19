@@ -5,6 +5,19 @@ import { IState } from '..';
 import { useObserver } from 'mobx-react-lite';
 import { Typography, Card, CardContent } from '@material-ui/core';
 
+const ColorChanger = ({color, text, onChange}:{color:string, text:string, onChange:(color:string)=>any})=>{
+    return (
+        <div style={{marginBottom:'16px'}}>
+                    <Typography>{text}</Typography>
+                    <ColorPicker
+                        name='color'
+                        hintText={color}
+                        value = {color}
+                        onChange={c => onChange(c)}
+                    />
+                </div>
+    )
+}
 
 export const Settings = ({state}:{state:IState})=>
 {
@@ -12,24 +25,10 @@ export const Settings = ({state}:{state:IState})=>
         <Card>
             <CardContent>
             <form noValidate autoComplete="off">
-                <div style={{marginBottom:'16px'}}>
-                    <Typography>Shirt Color</Typography>
-                    <ColorPicker
-                        name='color'
-                        hintText={state.shirtColor}
-                        value = {state.shirtColor}
-                        onChange={color => state.shirtColor = color}
-                    />
-                </div>
-                <div>
-                    <Typography>Pants Color</Typography>
-                    <ColorPicker
-                        name='color'
-                        hintText={state.pantsColor}
-                        value = {state.pantsColor}
-                        onChange={color => state.pantsColor = color}
-                    />
-                </div>
+                <ColorChanger color={state.shirtColor} text="Shirt Color" onChange={c=>state.shirtColor = c}/>
+                <ColorChanger color={state.pantsColor} text="Pants Color" onChange={c=>state.pantsColor = c}/>
+                <ColorChanger color={state.blouseColor} text="Blouse Color" onChange={c=>state.blouseColor = c}/>
+              
                 </form>
             </CardContent>
         </Card>

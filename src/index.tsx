@@ -10,13 +10,15 @@ export interface IState
 {
   shirtColor:string;
   pantsColor:string;
+  blouseColor:string;
 }
 
 const App = ()=>
 {
   const state = useObservable<IState>({
     shirtColor:'#9a6d26',
-    pantsColor:'#9DAECD'
+    pantsColor:'#9DAECD',
+    blouseColor:'#FF0000'
   });
 
 
@@ -25,7 +27,8 @@ const App = ()=>
           <div className="avatar">
             {useObserver(()=><Avatar 
             shirtColor={state.shirtColor}
-            pantsColor={state.pantsColor}/>)}
+            pantsColor={state.pantsColor}
+            blouseColor={state.blouseColor}/>)}
           </div>
           <div className="settings">
             <Settings state={state}/>

@@ -20,7 +20,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -35,33 +35,48 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1278"
-     inkscape:window-height="1378"
+     inkscape:window-width="1280"
+     inkscape:window-height="1387"
      id="namedview7"
      showgrid="false"
-     inkscape:zoom="6.2933333"
-     inkscape:cx="40.732879"
-     inkscape:cy="63.263322"
-     inkscape:window-x="-7"
-     inkscape:window-y="0"
+     inkscape:zoom="12.586667"
+     inkscape:cx="61.686885"
+     inkscape:cy="100.70525"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
      inkscape:window-maximized="0"
      inkscape:current-layer="svg5" />
+  <path
+     style="fill:#cd0000;fill-opacity:1;stroke:none;stroke-opacity:1"
+     d="M 35.119174,35.218485 8.4031256,66.007919 14.804474,72.371804 35.224716,48.2598 35.730327,75 64.269673,75.112358 64.550568,48.238209 84.97081,72.59652 91.709233,66.288814 64.960275,35.198623 l -11.313757,0.01986 -3.583985,1.6875 -3.652343,-1.685547 0.128906,-0.002 z"
+     id="shirt"
+     transform="translate(-50)"
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="ccccccccccccccc" />
+  <path
+     inkscape:connector-curvature="0"
+     style="fill:#00cd12;fill-opacity:1;stroke:none;stroke-opacity:1"
+     d="M -15,35 -41.484517,64.884338 -33.847229,71.97855 -15,49.214844 V 75 H 15 V 49.417969 L 33.622513,71.753834 41.315979,64.603443 15,35 H 3.5273432 l -3.58398469,1.6875 -3.65234301,-1.685547 0.128906,-0.002 z"
+     id="blouse"
+     sodipodi:nodetypes="ccccccccccccccc" />
+  <rect
+     style="fill:#f5a08b;fill-opacity:1;stroke:none;stroke-width:0.18167137;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     id="rect829"
+     width="10.336942"
+     height="3.5392792"
+     x="-4.8882332"
+     y="33.372322" />
   <path
      d="M 31.771484 114.8457 L 24.273438 119.17578 L 24.273438 123.32422 L 45.617188 123.32422 L 44.580078 115.4082 L 31.771484 114.8457 z M 68.400391 114.8457 L 55.591797 115.4082 L 54.556641 123.32422 L 75.900391 123.32422 L 75.900391 119.17578 L 68.400391 114.8457 z "
      transform="translate(-50)"
      id="shoes" />
-  <circle
+  <ellipse
      id="head"
-     fill="#F9C4B7"
-     cx="0"
-     cy="20"
-     r="15" />
-  <path
-     d="M 35,35 V 75 H 65 V 35 Z m 0,0 -27.2148438,30.783203 7.4687498,7.150391 19.941473,-23.953159 z m 30,0 -0.235102,14.139334 19.981197,23.79426 7.46875,-7.150391 z"
-     transform="translate(-50)"
-     id="shirt"
-     inkscape:connector-curvature="0"
-     sodipodi:nodetypes="ccccccccccccccc" />
+     cx="-0.19662665"
+     cy="20.955044"
+     rx="13.735971"
+     ry="13.764061"
+     style="fill:#f9c4b7;stroke-width:0.91666728" />
   <path
      d="m -15,75 -3.227621,40.00467 12.8085927,0.5625 L 0.08683168,81.184355 5.5926907,115.56717 18.401285,115.00467 15,75 C 0.22341738,75 0.22629091,75 -15,75 Z"
      id="pants"
@@ -79,4 +94,10 @@
      cx="42.002121"
      cy="73.093216"
      r="4.9258475" />
+  <path
+     style="fill:#cd0000;fill-opacity:1;stroke:#000000;stroke-width:0.2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     d="m -5.8430822,34.327981 5.7864412,2.359519 6.7976626,-2.921309 1.123581,1.292118 -5.22465,5.449366 L -0.056641,36.6875 -3.2026669,40.507675 -7.3037367,35.00213 Z"
+     id="collar"
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="ccccccccc" />
 </svg>
