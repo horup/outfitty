@@ -15,3 +15,4 @@ jobs:
       run: docker build . --file Dockerfile --tag horup/outfitty:latest --tag horup/outfitty:$(date +%s) --build-arg TEST=$GITHUB_SHA
     - name: Push the Docker image
       run: docker push horup/outfitty
+
