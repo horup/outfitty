@@ -10,7 +10,7 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Login to Docker
-      run: docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+      run: docker login -u ${{secrets.DOCKER_USERNAME}} -p ${{secrets.DOCKER_PASSWORD}}
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag horup/outfitty:$(date +%s)
     - name: Push the Docker image
