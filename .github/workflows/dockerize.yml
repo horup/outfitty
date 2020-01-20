@@ -15,3 +15,7 @@ jobs:
       run: docker build . --file Dockerfile --tag horup/outfitty:latest --tag horup/outfitty:$(date +%s) --build-arg TEST=$GITHUB_SHA
     - name: Push the Docker image
       run: docker push horup/outfitty
+    - name: Trigger App Service
+      uses: zzzze/webhook-trigger@v1.0.0
+      with:
+        webook_url: ${{secrets.APP_SERVICE_WEBHOOK}}
