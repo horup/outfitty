@@ -14,7 +14,7 @@ export interface IState
   blouseColor:string;
 }
 
-document.title = "Outfitty (" + process.env.GITHUB_SHA + ")";
+document.title = "Outfitty (" + process.env.VERSION + ")";
 const App = ()=>
 {
   const state = useObservable<IState>({
