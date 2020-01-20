@@ -1,4 +1,4 @@
-name: Docker Image CI
+name: Dockerize
 
 on: [push]
 
@@ -12,5 +12,6 @@ jobs:
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag horup/outfitty:$(date +%s)
     - name: Login to Docker
+      run: docker login -u ${DOCKER_USERNAME} -p ${DOCKER_PASSWORD}
     - name: Push the Docker image
       run: docker push horup/outfitty
