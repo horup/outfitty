@@ -5,6 +5,7 @@ import {Avatar} from './Avatar';
 import { Container } from '@material-ui/core';
 import { Settings } from './Settings';
 import { useObservable, useObserver } from 'mobx-react-lite';
+declare var process;
 
 export interface IState
 {
@@ -13,6 +14,7 @@ export interface IState
   blouseColor:string;
 }
 
+document.title = "Outfitty (" + process.env.GITHUB_SHA + ")";
 const App = ()=>
 {
   const state = useObservable<IState>({
