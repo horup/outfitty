@@ -15,4 +15,5 @@ jobs:
       run: docker build . --file Dockerfile --tag horup/outfitty:latest --tag horup/outfitty:$(date +%s) --build-arg TEST=$GITHUB_SHA
     - name: Push the Docker image
       run: docker push horup/outfitty
-
+    - name: Trigger App Service
+      run: "curl --data '' ${{secrets.APP_SERVICE_WEBHOOK_URL}}"
