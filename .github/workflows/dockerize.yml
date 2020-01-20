@@ -12,6 +12,6 @@ jobs:
     - name: Login to Docker
       run: docker login -u ${{secrets.DOCKER_USERNAME}} -p ${{secrets.DOCKER_PASSWORD}}
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag horup/outfitty:latest --tag horup/outfitty:$(date +%s) --build-arg TEST=abc
+      run: docker build . --file Dockerfile --tag horup/outfitty:latest --tag horup/outfitty:$(date +%s) --build-arg TEST=$GITHUB_SHA
     - name: Push the Docker image
       run: docker push horup/outfitty
