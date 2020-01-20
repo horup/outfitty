@@ -9,9 +9,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
+    - name: Login to Docker
+      run: docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag horup/outfitty:$(date +%s)
-    - name: Login to Docker
-      run: docker login -u ${DOCKER_USERNAME} -p ${DOCKER_PASSWORD}
     - name: Push the Docker image
       run: docker push horup/outfitty
