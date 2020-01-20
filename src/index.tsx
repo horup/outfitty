@@ -14,7 +14,6 @@ export interface IState
   blouseColor:string;
 }
 
-document.title = "Outfitty (" + process.env.VERSION + ")";
 const App = ()=>
 {
   const state = useObservable<IState>({
