@@ -18,4 +18,4 @@ jobs:
     - name: Trigger App Service
       uses: zzzze/webhook-trigger@v1.0.0
       with:
-        webook_url: ${{secrets.APP_SERVICE_WEBHOOK}}
+        webhook_url: ${{secrets.APP_SERVICE_WEBHOOK}}
