@@ -16,7 +16,4 @@ jobs:
     - name: Push the Docker image
       run: docker push horup/outfitty
     - name: Trigger App Service
-      uses: zzzze/webhook-trigger@v1.0.0
-      with:
-        webhook_url: ${{secrets.APP_SERVICE_WEBHOOK_URL}}
-        user: ${{secrets.APP_SERVICE_WEBHOOK_USER}}
+      run: "curl --data '' ${{secrets.APP_SERVICE_WEBHOOK_URL}}"
