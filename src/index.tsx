@@ -38,4 +38,6 @@ const App = ()=>
     )
 }
  
+
+console.log("TEST:"+process.env.TEST);
 ReactDOM.render(<App />, document.getElementById("app"));
