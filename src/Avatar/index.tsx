@@ -47,11 +47,12 @@ export const Avatar = ({shirtColor, pantsColor, blouseColor}:{shirtColor:string,
         fetch(s).then(async (resp)=>{
             div.innerHTML = await resp.text();
             let svg = div.getElementsByTagName("svg")[0];
+            svg.setAttribute("class", "avatar");
             setSvg({svg:svg});
         });
 
     }, []);
    
-    return <div ref={d=>div = d}/>)
+    return <div ref={d=>div = d}/>
 
 }
