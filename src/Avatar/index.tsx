@@ -30,16 +30,28 @@ export const Avatar = ({shirtColor, pantsColor, blouseColor}:{shirtColor:string,
     });
 
     let obj:HTMLObjectElement;
+    let test:HTMLDivElement;
+    if (test != null)
+    {
+        console.log(test);
+    }
     const load = ()=>
     {
         let svg = obj.getSVGDocument() as any;
         setSvg({svg:svg});
     }
+
+    let div:HTMLDivElement;
+    React.useEffect(()=>
+    {
+        fetch(s).then(async (resp)=>{
+            div.innerHTML = await resp.text();
+            let svg = div.getElementsByTagName("svg")[0];
+            setSvg({svg:svg});
+        });
+
+    }, []);
    
-    return (
-    <div>
-        <object ref={r=>obj = r} onLoad={()=>load()} data={s} type="image/svg+xml">
-        </object>
-    </div>)
+    return <div ref={d=>div = d}/>)
 
 }
