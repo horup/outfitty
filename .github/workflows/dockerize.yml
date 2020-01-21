@@ -1,0 +1,19 @@
+name: Dockerize
+
+on: [push]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Login to Docker
+      run: docker login -u ${{secrets.DOCKER_USERNAME}} -p ${{secrets.DOCKER_PASSWORD}}
+    - name: Build the Docker image
+      run: docker build . --file Dockerfile --tag horup/outfitty:latest --tag horup/outfitty:$(date +%s) --build-arg TEST=$GITHUB_SHA
+    - name: Push the Docker image
+      run: docker push horup/outfitty
+    - name: Trigger App Service
+      run: "curl --data '' ${{secrets.APP_SERVICE_WEBHOOK_URL}}"

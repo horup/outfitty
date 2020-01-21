@@ -5,6 +5,7 @@ import {Avatar} from './Avatar';
 import { Container } from '@material-ui/core';
 import { Settings } from './Settings';
 import { useObservable, useObserver } from 'mobx-react-lite';
+declare var process;
 
 export interface IState
 {
@@ -37,4 +38,6 @@ const App = ()=>
     )
 }
  
+
+console.log("TEST:"+process.env.TEST);
 ReactDOM.render(<App />, document.getElementById("app"));

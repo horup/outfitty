@@ -1,4 +1,5 @@
 FROM node:10 as builder
+ARG TEST
 WORKDIR /usr/src/app
 COPY package*.json ./
 RUN npm install
